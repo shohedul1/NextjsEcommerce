@@ -8,23 +8,22 @@ const HomePage = () => {
     return (
         <>
 
-            <div className='px-32 '>
-                <div className='flex flex-row gap-12'>
-                    <div className='border-r-[2px] border-slate-400 pr-5 backdrop-blur-md '>
+            <div className='md:px-32  px-2'>
+                <div className='flex flex-row gap-10'>
+                    <div className='border-r-[2px] border-slate-400 pr-5 backdrop-blur-md hidden md:block'>
                         <SideBar />
                     </div>
-                    <div className='w-full h-[344px] relative overflow-hidden'>
+                    <div className='pt-10 w-full h-[350px] relative overflow-hidden'>
                         <Carousel />
                     </div>
                 </div>
             </div>
-            <div className='pt-36'>
+            {/* <div className='pt-36'>
                 <SiderPage />
-            </div>
+            </div> */}
 
         </>
     )
 }
 
 export default HomePage
-

@@ -8,24 +8,20 @@ import { CiShoppingCart } from "react-icons/ci";
 import NavLink from '@/type/page';
 import { usePathname } from 'next/navigation';
 
-
-
 const Navbar = () => {
     const pathname = usePathname();
-
-
     return (
-        <div className='flex items-center justify-center'>
+        <div className='flex items-center justify-center '>
             <div className='w-full'>
                 <div className='max-w-[1400px] mx-auto'>
                     <div className=' flex flex-col'>
-                        <div className='flex justify-between items-center px-32 py-3 w-full bg-black  text-white '>
-                            <div className='text-center flex-1'>
-                                <div className='flex justify-center items-center gap-2'>
-                                    <p className='text-sm text-slate-300 mr-2'>
+                        <div className='flex md:justify-between justify-center items-center md:px-32 px-2  py-3 w-full bg-black  text-white '>
+                            <div className='text-center flex-1 '>
+                                <div className='flex md:justify-center justify-start items-center md:gap-2'>
+                                    <p className=' hidden md:block text-sm text-slate-300 mr-2'>
                                         Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
                                     </p>
-                                    <h1 className='font-semibold text-xl text-red-500'>
+                                    <h1 className=' font-semibold text-xl text-red-500'>
                                         ShopNow
                                     </h1>
                                 </div>
@@ -45,11 +41,11 @@ const Navbar = () => {
                             </div>
                             {/* Centered text */}
                         </div>
-                        <div className='flex items-center justify-between px-32 w-full  pt-10 pb-6 border-b border-gray-400'>
+                        <div className='flex items-center justify-between lg:px-32 w-full px-2  pt-10 pb-6 border-b border-gray-400'>
                             <div className='font-bold text-2xl	'>
                                 Exclusive
                             </div>
-                            <div className='flex flex-row gap-12'>
+                            <div className='flex-row gap-12 md:flex hidden'>
                                 {
                                     NavLink.map((item, index) => {
                                         const isActive = pathname === item.link;  // Check if the link is active using pathname
@@ -90,6 +86,7 @@ const Navbar = () => {
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -98,4 +95,5 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Navbar;
+

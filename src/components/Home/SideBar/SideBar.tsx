@@ -4,7 +4,7 @@
 const SideBar = () => {
 
     return (
-        <div className='flex flex-col gap-4 pt-5 '>
+        <div className='flex-col gap-4 pt-5 flex   '>
             <div className='flex flex-col items-start justify-start'>
                 <div className='text-[14px] font-normal '>
                     <select
@@ -31,16 +31,12 @@ const SideBar = () => {
                     </select>
                 </div>
             </div>
-
-
             <div className='text-[14px] font-normal '>
                 Electronics
             </div>
-
             <div className='text-[14px] font-normal '>
                 Home & Lifestyle
             </div>
-
             <div className='text-[14px] font-normal '>
                 Medicine
             </div>
