@@ -60,9 +60,7 @@ const Navbar = () => {
                                             >
                                                 {item.name}
                                             </Link>
-
                                         )
-
                                     })
                                 }
                             </div>
@@ -72,7 +70,7 @@ const Navbar = () => {
                                     <input
                                         type="text"
                                         placeholder='What are you looking for?'
-                                        className='outline-none text-slate-600 transition-all duration-300 bg-gray-300 ease-in-out w-[50px] group-hover:w-full'
+                                        className='outline-none text-slate-600 transition-all duration-300 bg-gray-300 ease-in-out w-[50px] group-hover:w-[100px]'
                                         style={{ flexGrow: 1 }}
 
                                     />
