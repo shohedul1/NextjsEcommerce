@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { PiCaretLeft, PiCaretRight } from 'react-icons/pi';
-import Slider from 'react-slick';
+import Slider, { CustomArrowProps } from 'react-slick';
 
 const SliderPage = () => {
   const [currentTime, setCurrentTime] = useState({
@@ -33,7 +33,8 @@ const SliderPage = () => {
     return () => clearInterval(timer); // Cleanup timer on unmount
   }, []);
 
-  const NextArrow = (props: any) => {
+  // Define custom arrows with proper typing
+  const NextArrow = (props: CustomArrowProps) => {
     const { onClick } = props;
     return (
       <div
@@ -43,15 +44,19 @@ const SliderPage = () => {
       </div>
     );
   };
-  const PrevArrow = (props: any) => {
+
+  const PrevArrow = (props: CustomArrowProps) => {
     const { onClick } = props;
     return (
-      <div className="p-3 bg-slate-100 hover:text-orange-600 hover:bg-white cursor-pointer duration-200 rounded-full text-2xl flex items-center justify-center z-20 absolute top-0 right-2"
+      <div
+        className="p-3 bg-slate-100 hover:text-orange-600 hover:bg-white cursor-pointer duration-200 rounded-full text-2xl flex items-center justify-center z-20 absolute top-0 right-2"
         onClick={onClick}>
         <PiCaretRight />
       </div>
     );
   };
+
+  // Slider settings
   const settings = {
     dots: false,
     infinite: true,
@@ -60,16 +65,14 @@ const SliderPage = () => {
     slidesToScroll: 1,
     arrows: true,
     nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />
-
+    prevArrow: <PrevArrow />,
   };
 
   return (
-
     <div className="flex flex-col gap-6">
-      <div className='flex flex-col'>
-        <div className='md:px-32 px-2'>
-          <div className=" text-red-500 text-[16px] font-semibold border-l-[20px] pl-4 py-5 rounded-full border-red-500">
+      <div className="flex flex-col">
+        <div className="md:px-32 px-2">
+          <div className="text-red-500 text-[16px] font-semibold border-l-[20px] pl-4 py-5 rounded-full border-red-500">
             Today’s
           </div>
         </div>
@@ -109,30 +112,18 @@ const SliderPage = () => {
               </div>
             </div>
           </div>
-          {/* <div className="flex items-center gap-2 flex-row">
-                        <div className="bg-[#F5F5F5] h-[46px] w-[46px] rounded-full flex items-center justify-center overflow-hidden relative">
-                            <FaArrowLeft />
-                        </div>
-                        <div className="bg-[#F5F5F5] h-[46px] w-[46px] rounded-full flex items-center justify-center overflow-hidden relative">
-                            <FaArrowRight />
-                        </div>
-
-                    </div> */}
         </div>
-        <div className='pl-32 relative overflow-hidden'>
+        <div className="pl-32 relative overflow-hidden">
           <Slider {...settings}>
-            <div className='w-[500px] h-[500px] bg-red-50'>hello</div>
-            <div className='w-[500px] h-[500px] bg-red-50'>hello developer</div>
-
+            <div className="w-[500px] h-[500px] bg-red-50">hello</div>
+            <div className="w-[500px] h-[500px] bg-red-50">hello developer</div>
           </Slider>
         </div>
       </div>
 
-      <div className="w-full pl-32 bg-lime-500">
-        asdf
-      </div>
+      <div className="w-full pl-32 bg-lime-500">asdf</div>
     </div>
   );
 };
 
-export default SliderPage
+export default SliderPage;
