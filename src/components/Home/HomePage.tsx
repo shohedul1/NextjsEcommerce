@@ -3,7 +3,6 @@ import SideBar from './SideBar/SideBar'
 import Carousel from './Carousel/Carousel';
 import FristSection from './FristSection/FristSection';
 import SliderPage from './Slider/SliderPage';
-import SiderPage from './Slider/Sider';
 
 
 const HomePage = () => {
