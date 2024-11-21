@@ -2,8 +2,8 @@ import React from 'react'
 import SideBar from './SideBar/SideBar'
 import Carousel from './Carousel/Carousel';
 import FristSection from './FristSection/FristSection';
-import SiderPage from './Slider/Slider';
 import SliderPage from './Slider/SliderPage';
+import SiderPage from './Slider/Sider';
 
 
 const HomePage = () => {
@@ -21,8 +21,8 @@ const HomePage = () => {
                 </div>
             </div>
             <div className='mt-10'>
-                {/* <SliderPage /> */}
-                <SiderPage />
+                <SliderPage />
+
                 <FristSection />
             </div>
 
